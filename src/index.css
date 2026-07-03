@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@layer components{
+    .btn-black{
+        @apply w-full py-2 bg-black text-white rounded-full hover:bg-gray-900 transition-all cursor-pointer
+    }
+    .btn-white{
+        @apply w-full py-2 bg-white text-black rounded-full hover:bg-gray-100 transition-all cursor-pointer
+    }
+}
