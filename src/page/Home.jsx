@@ -6,9 +6,12 @@ import logo2 from '../assets/logo2.png'
 import logo3 from '../assets/logo3.png'
 import logo4 from '../assets/logo4.png'
 import logo5 from '../assets/logo5.png'
+import proces1 from '../assets/process1.jpg'
+import proces2 from '../assets/process2.jpg'
+import proces3 from '../assets/process3.jpg'
 import advantages from '../assets/advantages.png'
 
-import { BrainCog, Calendar, CircleArrowOutUpRight, GamepadDirectional, Globe, NotebookPen, ShieldPlus } from 'lucide-react'
+import { BrainCog, Calendar, CircleArrowOutUpRight, GamepadDirectional, Globe, NotebookPen, ShieldPlus, TrendingUp } from 'lucide-react'
 
 const Home = () => {
 
@@ -104,6 +107,58 @@ const Home = () => {
             list: "Lorem, ipsum dolor.",
             btn: "btn-black"
         },
+    ]
+
+    // Processes 
+    const processes = [
+        {
+            id: 1,
+            title: "Choose the Right Insurance Plan",
+            image: proces1,
+            reverse: false,
+            features: [
+                {
+                    title: "Compare Plans",
+                    description: "Choose the insurance plan that best fits your needs."
+                },
+                {
+                    title: "Affordable Pricing",
+                    description: "Get the best protection at a reasonable price."
+                },
+            ]
+        },
+        {
+            id: 2,
+            title: "Submit Your Information",
+            image: proces2,
+            reverse: true,
+            features: [
+                {
+                    title: "Quick Registration",
+                    description: "Fill out your personal information in a few minutes."
+                },
+                {
+                    title: "Secure Process",
+                    description: "Your personal data is protected and encrypted."
+                }
+            ]
+        },
+        {
+            id: 3,
+            title: "Get Protected",
+            image: proces3,
+            reverse: false,
+            features: [
+                {
+                    title: "Instant Approval",
+                    description: "Receive your policy confirmation quickly."
+                },
+                {
+                    title: "24/7 Support",
+                    description: "Our team is ready to help anytime."
+                }
+            ]
+        }
     ]
 
     return (
@@ -284,6 +339,38 @@ const Home = () => {
                                 </div>
                                 <div className='mt-5'>
                                     <button className={item.btn}>Subscaib</button>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </section>
+
+            {/* --- Our Insurance Process */}
+            <section className='px-4 md:px-30 py-20 bg-gray-100'>
+                <div>
+                    <h3 className='text-center text-4xl font-bold'>How Our Insurance <br />
+                        Process works
+                    </h3>
+                </div>
+
+                <div className='mt-10 grid gap-15'>
+                    {
+                        processes.map((process) => (
+                            <div className={`grid grid-cols-2 gap-10 ${process.reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
+                                <div>
+                                    <img className='h-[300px] w-full object-cover rounded' src={process.image} alt={process.title} />
+                                </div>
+                                <div className='flex flex-col justify-center'>
+                                    <h3 className='text-2xl font-bold mb-5'>{process.title}</h3>
+                                    {
+                                        process.features.map((feature, index) => (
+                                            <div key={index} className='mt-2'>
+                                                <h5 className='flex font-bold'><TrendingUp /> <span>{feature.title}</span></h5>
+                                                <p>{feature.description}</p>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         ))
