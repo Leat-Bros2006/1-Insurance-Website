@@ -1,166 +1,12 @@
 import Navbar from '../components/Navbar'
 import Hero from '../assets/hero.png'
 import aboutUs from '../assets/aboutUs.png'
-import logo1 from '../assets/logo1.png'
-import logo2 from '../assets/logo2.png'
-import logo3 from '../assets/logo3.png'
-import logo4 from '../assets/logo4.png'
-import logo5 from '../assets/logo5.png'
-import proces1 from '../assets/process1.jpg'
-import proces2 from '../assets/process2.jpg'
-import proces3 from '../assets/process3.jpg'
-import advantages from '../assets/advantages.png'
+import advantage from '../assets/advantages.png'
+import { advantages, logos, plans, state, range, clients, processes } from '../data/index.js'
 
 import { BrainCog, Calendar, CircleArrowOutUpRight, GamepadDirectional, Globe, NotebookPen, ShieldPlus, TrendingUp } from 'lucide-react'
 
 const Home = () => {
-
-    // state
-    const state = [
-        {
-            num: "34K+",
-            text: "Success Stories"
-        },
-        {
-            num: "210K+",
-            text: "Professional Team"
-        },
-        {
-            num: "54K+",
-            text: "Satisfied Clients"
-        },
-        {
-            num: "35K+",
-            text: "Partners Circle"
-        },
-    ]
-
-    // Range of Services
-    const range = [
-        {
-            icon: <ShieldPlus />,
-            title: "Life Insuranc",
-            des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit adipisci, ipsa possimus fuga ut perspiciatis officia vero veniam reiciendis obcaecati molestiae ex deleniti quas repellendus odit facilis ipsam et nostrum"
-        },
-        {
-            icon: <GamepadDirectional />,
-            title: "Health Insurance",
-            des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit adipisci, ipsa possimus fuga ut perspiciatis officia vero veniam reiciendis obcaecati molestiae ex deleniti quas repellendus odit facilis ipsam et nostrum"
-        },
-        {
-            icon: <ShieldPlus />,
-            title: "Auto Insurance",
-            des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit adipisci, ipsa possimus fuga ut perspiciatis officia vero veniam reiciendis obcaecati molestiae ex deleniti quas repellendus odit facilis ipsam et nostrum"
-        },
-        {
-            icon: <BrainCog />,
-            title: "Home Insurance",
-            des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit adipisci, ipsa possimus fuga ut perspiciatis officia vero veniam reiciendis obcaecati molestiae ex deleniti quas repellendus odit facilis ipsam et nostrum"
-        },
-    ]
-
-    // Advantages
-    const avtgs = [
-        {
-            icon: <NotebookPen />,
-            title: "Experience and Expertise",
-            des: "Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero pariatur placeat aspernatur, quis impedit at necessitatibus facere illum. Incidunt?"
-        },
-        {
-            icon: <Globe />,
-            title: "Comprehensive Coverage",
-            des: "Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero pariatur placeat aspernatur, quis impedit at necessitatibus facere illum. Incidunt?"
-        },
-        {
-            icon: <Calendar />,
-            title: "Customer-Centric Approach",
-            des: "Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero pariatur placeat aspernatur, quis impedit at necessitatibus facere illum. Incidunt?"
-        }
-    ]
-
-    // Insurance Plans
-    const inSurancePlans = [
-        {
-            price: 9883,
-            data: "month",
-            title: "Basic Plan",
-            des: "reprehenderit nam labore at nobis similique alias, laboriosam iusto dolorem!",
-            listTitle: "Lorem, ipsum.",
-            list: "Lorem, ipsum dolor.",
-            btn: "btn-black"
-        },
-        {
-            price: 23,
-            data: "day",
-            title: "Advance Plan",
-            des: "reprehenderit nam labore at nobis similique alias, laboriosam iusto dolorem!",
-            listTitle: "Lorem, ipsum.",
-            list: "Lorem, ipsum dolor.",
-            btn: "btn-white"
-        },
-        {
-            price: 876,
-            data: "year",
-            title: "Professional Plan",
-            des: "reprehenderit nam labore at nobis similique alias, laboriosam iusto dolorem!",
-            listTitle: "Lorem, ipsum.",
-            list: "Lorem, ipsum dolor.",
-            btn: "btn-black"
-        },
-    ]
-
-    // Processes 
-    const processes = [
-        {
-            id: 1,
-            title: "Choose the Right Insurance Plan",
-            image: proces1,
-            reverse: false,
-            features: [
-                {
-                    title: "Compare Plans",
-                    description: "Choose the insurance plan that best fits your needs."
-                },
-                {
-                    title: "Affordable Pricing",
-                    description: "Get the best protection at a reasonable price."
-                },
-            ]
-        },
-        {
-            id: 2,
-            title: "Submit Your Information",
-            image: proces2,
-            reverse: true,
-            features: [
-                {
-                    title: "Quick Registration",
-                    description: "Fill out your personal information in a few minutes."
-                },
-                {
-                    title: "Secure Process",
-                    description: "Your personal data is protected and encrypted."
-                }
-            ]
-        },
-        {
-            id: 3,
-            title: "Get Protected",
-            image: proces3,
-            reverse: false,
-            features: [
-                {
-                    title: "Instant Approval",
-                    description: "Receive your policy confirmation quickly."
-                },
-                {
-                    title: "24/7 Support",
-                    description: "Our team is ready to help anytime."
-                }
-            ]
-        }
-    ]
-
     return (
         <div>
             <Navbar />
@@ -236,11 +82,9 @@ const Home = () => {
 
             {/* --- Logo --- */}
             <section className='grid md:grid-cols-3 lg:grid-cols-5 bg-gray-100 px-4 md:px-30 gap-15 py-20'>
-                <img className='w-full h-[200px] object-contain' src={logo1} alt="" />
-                <img className='w-full h-[200px] object-contain' src={logo3} alt="" />
-                <img className='w-full h-[200px] object-contain' src={logo2} alt="" />
-                <img className='w-full h-[200px] object-contain' src={logo4} alt="" />
-                <img className='w-full h-[200px] object-contain' src={logo5} alt="" />
+                {logos.map((item, index) => (
+                    <img key={index} className='w-full h-[200px] object-contain' src={item} alt="" />
+                ))}
             </section>
 
             {/* --- Range Services --- */}
@@ -253,10 +97,11 @@ const Home = () => {
                 <section className='grid md:grid-cols-2 gap-4 mt-10'>
                     {
                         range.map((item, index) => {
+                            const Icon = item.icon;
                             return (
                                 <div key={index} className='flex bg-gray-200 rounded p-4 gap-4'>
                                     <div className='p-2.5 rounded flex justify-center items-center w-10 h-10 bg-slate-900 text-white'>
-                                        {item.icon}
+                                        <Icon />
                                     </div>
                                     <div>
                                         <h5 className='font-bold text-2xl'>{item.title}</h5>
@@ -269,7 +114,7 @@ const Home = () => {
                 </section>
             </section>
 
-            {/* --- Why Lumintu ---- */}
+            {/* --- advantages ---- */}
             <section className='grid md:grid-cols-2 px-4 md:px-30 py-20 gap-15 bg-blue-950'>
                 <div>
                     <h3 className='font-bold text-white text-4xl'>
@@ -278,12 +123,13 @@ const Home = () => {
                         Industry
                     </h3>
                     {
-                        avtgs.map((avt, index) => {
+                        advantages.map((avt, index) => {
+                            const Icon = avt.icon;
                             return (
                                 <div key={index}>
                                     <div className='mt-5 flex gap-2'>
                                         <div className=' p-2.5 rounded flex justify-center items-center w-10 h-10 bg-black text-white'>
-                                            {avt.icon}
+                                            <Icon />
                                         </div>
                                         <div>
                                             <h5 className='text-white text-xl font-bold'>{avt.title}</h5>
@@ -296,7 +142,7 @@ const Home = () => {
                     }
                 </div>
                 <div>
-                    <img className='h-[500px] object-cover rounded w-full' src={advantages} alt="" />
+                    <img className='h-[500px] object-cover rounded w-full' src={advantage} alt="" />
                 </div>
             </section>
 
@@ -310,38 +156,40 @@ const Home = () => {
                 <div className='grid gap-5 md:grid-cols-2 xl:grid-cols-3 mt-4'>
                     {/* box */}
                     {
-                        inSurancePlans.map((item, index) => (
-
-                            <div className='p-8 rounded bg-gray-200'>
-                                <div>
-                                    <p className=''><span className='font-bold text-[20px]'>${item.price}</span> <span>{item.data}</span></p>
-                                    <h5 className='mt-3 font-bold text-[30px]'>{item.title}</h5>
-                                    <p>{item.des}</p>
+                        plans.map((item, index) => {
+                            const Icon = item.icon;
+                            return (
+                                <div key={index} className='p-8 rounded bg-gray-200'>
+                                    <div>
+                                        <p className=''><span className='font-bold text-[20px]'>${item.price}</span> <span>{item.data}</span></p>
+                                        <h5 className='mt-3 font-bold text-[30px]'>{item.title}</h5>
+                                        <p>{item.des}</p>
+                                    </div>
+                                    <hr className='mt-6 mb-3 border-gray-400' />
+                                    <div>
+                                        <h5 className='font-medium'>{item.listTitle}</h5>
+                                        <ul className='list-disc pl-8'>
+                                            <li>{item.list}</li>
+                                            <li>{item.list}</li>
+                                            <li>{item.list}</li>
+                                            <li>{item.list}</li>
+                                        </ul>
+                                    </div>
+                                    <div className='mt-2'>
+                                        <h5 className='font-medium'>Lorem, ipsum.</h5>
+                                        <ul className='list-disc pl-8'>
+                                            <li>Lorem, ipsum dolor.</li>
+                                            <li>Lorem, ipsum dolor.</li>
+                                            <li>Lorem, ipsum dolor.</li>
+                                            <li>Lorem, ipsum dolor.</li>
+                                        </ul>
+                                    </div>
+                                    <div className='mt-5'>
+                                        <button className={item.btn}>Subscaib</button>
+                                    </div>
                                 </div>
-                                <hr className='mt-6 mb-3 border-gray-400' />
-                                <div>
-                                    <h5 className='font-medium'>{item.listTitle}</h5>
-                                    <ul className='list-disc pl-8'>
-                                        <li>{item.list}</li>
-                                        <li>{item.list}</li>
-                                        <li>{item.list}</li>
-                                        <li>{item.list}</li>
-                                    </ul>
-                                </div>
-                                <div className='mt-2'>
-                                    <h5 className='font-medium'>Lorem, ipsum.</h5>
-                                    <ul className='list-disc pl-8'>
-                                        <li>Lorem, ipsum dolor.</li>
-                                        <li>Lorem, ipsum dolor.</li>
-                                        <li>Lorem, ipsum dolor.</li>
-                                        <li>Lorem, ipsum dolor.</li>
-                                    </ul>
-                                </div>
-                                <div className='mt-5'>
-                                    <button className={item.btn}>Subscaib</button>
-                                </div>
-                            </div>
-                        ))
+                            )
+                        })
                     }
                 </div>
             </section>
@@ -356,8 +204,8 @@ const Home = () => {
 
                 <div className='mt-10 grid gap-15'>
                     {
-                        processes.map((process) => (
-                            <div className={`grid grid-cols-2 gap-10 ${process.reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
+                        processes.map((process, index) => (
+                            <div key={index} className={`grid grid-cols-2 gap-10 ${process.reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
                                 <div>
                                     <img className='h-[300px] w-full object-cover rounded' src={process.image} alt={process.title} />
                                 </div>
@@ -374,6 +222,31 @@ const Home = () => {
                                 </div>
                             </div>
                         ))
+                    }
+                </div>
+            </section>
+
+
+            {/* Hear from Our Clients */}
+            <section className='px-4 md:px-30 gap-15 py-20'>
+                <h3 className='font-bold'>Hear From Our Clients</h3>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                    {/* box */}
+                    {
+                        clients.map((item, index) => {
+                            return (
+                                <div key={index} className='bg-gray-100 p-6 rounded'>
+                                    <div key={index} className='flex gap-3'>
+                                        <img className='w-15 h-15 rounded-full object-cover' src={item.profile} alt="" />
+                                        <div>
+                                            <p>⭐⭐⭐⭐⭐</p>
+                                            <p className='font-bold text-2xl'>{item.profile}</p>
+                                        </div>
+                                    </div>
+                                    <div className='mt-4'>{item.description}</div>
+                                </div>
+                            )
+                        })
                     }
                 </div>
             </section>
